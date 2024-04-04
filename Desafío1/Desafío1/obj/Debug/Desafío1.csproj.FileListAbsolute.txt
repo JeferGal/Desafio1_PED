@@ -10,3 +10,4 @@ C:\Users\MINEDUCYT\source\repos\Desafío1\Desafío1\obj\Debug\Desafío1.exe
 C:\Users\MINEDUCYT\source\repos\Desafío1\Desafío1\obj\Debug\Desafío1.pdb
 C:\Users\MINEDUCYT\source\repos\Desafío1\Desafío1\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\MINEDUCYT\source\repos\Desafío1\Desafío1\obj\Debug\Desafío1.csproj.CopyComplete
+C:\Users\MINEDUCYT\source\repos\Desafío1\Desafío1\obj\Debug\Desafío1.Form2.resources

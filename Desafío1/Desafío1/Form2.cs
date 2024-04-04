@@ -16,5 +16,33 @@ namespace Desafío1
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new BuscarPaciente().Show();
+            this.Hide();
+        }
+
+        private void bttn_Agregar_Click(object sender, EventArgs e)
+        {
+            new AgregarPaciente().Show();
+            this.Hide();
+        }
+
+        private void bttn_Eliminar_Click(object sender, EventArgs e)
+        {
+            new EliminarPaciente().Show();
+            this.Hide();
+        }
     }
 }
