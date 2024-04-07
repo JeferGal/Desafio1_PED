@@ -45,9 +45,10 @@ namespace Desafío1
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.button1.Location = new System.Drawing.Point(30, 74);
+            this.button1.Location = new System.Drawing.Point(40, 91);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 68);
+            this.button1.Size = new System.Drawing.Size(160, 84);
             this.button1.TabIndex = 2;
             this.button1.Text = "Buscar Paciente";
             this.button1.UseVisualStyleBackColor = true;
@@ -58,9 +59,10 @@ namespace Desafío1
             this.bttn_Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bttn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_Agregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.bttn_Agregar.Location = new System.Drawing.Point(30, 190);
+            this.bttn_Agregar.Location = new System.Drawing.Point(40, 234);
+            this.bttn_Agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bttn_Agregar.Name = "bttn_Agregar";
-            this.bttn_Agregar.Size = new System.Drawing.Size(120, 68);
+            this.bttn_Agregar.Size = new System.Drawing.Size(160, 84);
             this.bttn_Agregar.TabIndex = 3;
             this.bttn_Agregar.Text = "Agregar Paciente";
             this.bttn_Agregar.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@ namespace Desafío1
             this.bttn_Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bttn_Eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bttn_Eliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.bttn_Eliminar.Location = new System.Drawing.Point(30, 306);
+            this.bttn_Eliminar.Location = new System.Drawing.Point(40, 377);
+            this.bttn_Eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bttn_Eliminar.Name = "bttn_Eliminar";
-            this.bttn_Eliminar.Size = new System.Drawing.Size(120, 68);
+            this.bttn_Eliminar.Size = new System.Drawing.Size(160, 84);
             this.bttn_Eliminar.TabIndex = 4;
             this.bttn_Eliminar.Text = "Eliminar Paciente";
             this.bttn_Eliminar.UseVisualStyleBackColor = true;
@@ -87,8 +90,9 @@ namespace Desafío1
             this.panel1.Controls.Add(this.bttn_Agregar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(171, 450);
+            this.panel1.Size = new System.Drawing.Size(228, 554);
             this.panel1.TabIndex = 5;
             // 
             // iconPictureBox1
@@ -98,10 +102,11 @@ namespace Desafío1
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.FirstAid;
             this.iconPictureBox1.IconColor = System.Drawing.Color.Crimson;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 110;
-            this.iconPictureBox1.Location = new System.Drawing.Point(281, 167);
+            this.iconPictureBox1.IconSize = 135;
+            this.iconPictureBox1.Location = new System.Drawing.Point(375, 206);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(113, 110);
+            this.iconPictureBox1.Size = new System.Drawing.Size(151, 135);
             this.iconPictureBox1.TabIndex = 7;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -112,9 +117,10 @@ namespace Desafío1
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(415, 388);
+            this.label1.Location = new System.Drawing.Point(553, 478);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 18);
+            this.label1.Size = new System.Drawing.Size(57, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "EXIT";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -125,23 +131,25 @@ namespace Desafío1
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Location = new System.Drawing.Point(202, 26);
+            this.label2.Location = new System.Drawing.Point(269, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(259, 35);
+            this.label2.Size = new System.Drawing.Size(326, 45);
             this.label2.TabIndex = 8;
             this.label2.Text = "Sistema de Pacientes";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 450);
+            this.ClientSize = new System.Drawing.Size(697, 554);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);

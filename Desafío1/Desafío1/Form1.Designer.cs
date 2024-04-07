@@ -51,9 +51,10 @@ namespace Desafío1
             this.label1.Cursor = System.Windows.Forms.Cursors.No;
             this.label1.Font = new System.Drawing.Font("Bauhaus 93", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.label1.Location = new System.Drawing.Point(92, 57);
+            this.label1.Location = new System.Drawing.Point(123, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 36);
+            this.label1.Size = new System.Drawing.Size(141, 45);
             this.label1.TabIndex = 2;
             this.label1.Text = "LOG IN";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -61,17 +62,19 @@ namespace Desafío1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(150)))));
-            this.panel2.Location = new System.Drawing.Point(68, 207);
+            this.panel2.Location = new System.Drawing.Point(91, 255);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 1);
+            this.panel2.Size = new System.Drawing.Size(267, 1);
             this.panel2.TabIndex = 5;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(150)))));
-            this.panel3.Location = new System.Drawing.Point(68, 265);
+            this.panel3.Location = new System.Drawing.Point(91, 326);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 1);
+            this.panel3.Size = new System.Drawing.Size(267, 1);
             this.panel3.TabIndex = 6;
             // 
             // bttnLogin
@@ -81,10 +84,11 @@ namespace Desafío1
             this.bttnLogin.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.bttnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bttnLogin.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bttnLogin.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.bttnLogin.Location = new System.Drawing.Point(35, 311);
+            this.bttnLogin.ForeColor = System.Drawing.Color.Honeydew;
+            this.bttnLogin.Location = new System.Drawing.Point(47, 383);
+            this.bttnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.bttnLogin.Name = "bttnLogin";
-            this.bttnLogin.Size = new System.Drawing.Size(233, 35);
+            this.bttnLogin.Size = new System.Drawing.Size(311, 43);
             this.bttnLogin.TabIndex = 7;
             this.bttnLogin.Text = "LOG IN";
             this.bttnLogin.UseVisualStyleBackColor = false;
@@ -97,9 +101,10 @@ namespace Desafío1
             this.EXIT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EXIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EXIT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.EXIT.Location = new System.Drawing.Point(131, 368);
+            this.EXIT.Location = new System.Drawing.Point(175, 453);
+            this.EXIT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.EXIT.Name = "EXIT";
-            this.EXIT.Size = new System.Drawing.Size(44, 18);
+            this.EXIT.Size = new System.Drawing.Size(57, 24);
             this.EXIT.TabIndex = 8;
             this.EXIT.Text = "EXIT";
             this.EXIT.Click += new System.EventHandler(this.EXIT_Click);
@@ -110,10 +115,11 @@ namespace Desafío1
             this.textUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.textUserName.Location = new System.Drawing.Point(68, 181);
+            this.textUserName.Location = new System.Drawing.Point(91, 223);
+            this.textUserName.Margin = new System.Windows.Forms.Padding(4);
             this.textUserName.Multiline = true;
             this.textUserName.Name = "textUserName";
-            this.textUserName.Size = new System.Drawing.Size(200, 24);
+            this.textUserName.Size = new System.Drawing.Size(267, 30);
             this.textUserName.TabIndex = 9;
             // 
             // textPassword
@@ -122,11 +128,12 @@ namespace Desafío1
             this.textPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.textPassword.Location = new System.Drawing.Point(68, 239);
+            this.textPassword.Location = new System.Drawing.Point(91, 294);
+            this.textPassword.Margin = new System.Windows.Forms.Padding(4);
             this.textPassword.Multiline = true;
             this.textPassword.Name = "textPassword";
             this.textPassword.PasswordChar = '*';
-            this.textPassword.Size = new System.Drawing.Size(200, 24);
+            this.textPassword.Size = new System.Drawing.Size(267, 30);
             this.textPassword.TabIndex = 10;
             // 
             // iconPictureBox1
@@ -136,10 +143,11 @@ namespace Desafío1
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 27;
-            this.iconPictureBox1.Location = new System.Drawing.Point(35, 181);
+            this.iconPictureBox1.IconSize = 33;
+            this.iconPictureBox1.Location = new System.Drawing.Point(47, 223);
+            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(27, 27);
+            this.iconPictureBox1.Size = new System.Drawing.Size(36, 33);
             this.iconPictureBox1.TabIndex = 11;
             this.iconPictureBox1.TabStop = false;
             // 
@@ -150,10 +158,11 @@ namespace Desafío1
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.UnlockKeyhole;
             this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox2.IconSize = 27;
-            this.iconPictureBox2.Location = new System.Drawing.Point(35, 236);
+            this.iconPictureBox2.IconSize = 33;
+            this.iconPictureBox2.Location = new System.Drawing.Point(47, 290);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(27, 27);
+            this.iconPictureBox2.Size = new System.Drawing.Size(36, 33);
             this.iconPictureBox2.TabIndex = 12;
             this.iconPictureBox2.TabStop = false;
             // 
@@ -164,10 +173,11 @@ namespace Desafío1
             this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Medrt;
             this.iconPictureBox3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
             this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox3.IconSize = 79;
-            this.iconPictureBox3.Location = new System.Drawing.Point(111, 96);
+            this.iconPictureBox3.IconSize = 97;
+            this.iconPictureBox3.Location = new System.Drawing.Point(148, 118);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(79, 79);
+            this.iconPictureBox3.Size = new System.Drawing.Size(105, 97);
             this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.iconPictureBox3.TabIndex = 13;
             this.iconPictureBox3.TabStop = false;
@@ -178,19 +188,20 @@ namespace Desafío1
             this.ClearFields.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ClearFields.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClearFields.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.ClearFields.Location = new System.Drawing.Point(176, 286);
+            this.ClearFields.Location = new System.Drawing.Point(235, 352);
+            this.ClearFields.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ClearFields.Name = "ClearFields";
-            this.ClearFields.Size = new System.Drawing.Size(92, 16);
+            this.ClearFields.Size = new System.Drawing.Size(111, 20);
             this.ClearFields.TabIndex = 14;
             this.ClearFields.Text = "Clear Fields";
             this.ClearFields.Click += new System.EventHandler(this.ClearFields_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(292, 447);
+            this.ClientSize = new System.Drawing.Size(389, 550);
             this.ControlBox = false;
             this.Controls.Add(this.ClearFields);
             this.Controls.Add(this.iconPictureBox3);
@@ -204,6 +215,7 @@ namespace Desafío1
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
