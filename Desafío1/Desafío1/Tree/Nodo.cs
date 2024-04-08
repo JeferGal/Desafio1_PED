@@ -9,7 +9,7 @@ namespace Desafío1.Tree
 {
     class Nodo
     {
-        public Paciente Paciente { get; set; } 
+        public Paciente Paciente { get; set; }
         public List<Nodo> Punteros { get; } = new List<Nodo>(); // Lista de punteros
         public int Altura { get; private set; }
 

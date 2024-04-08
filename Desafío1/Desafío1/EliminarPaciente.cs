@@ -1,4 +1,5 @@
 ﻿using Desafío1.Tree;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +14,11 @@ namespace Desafío1
 {
     public partial class EliminarPaciente : Form
     {
-        private ArbolPacientes arbol;
+        //private ArbolPacientes arbol;
 
         public EliminarPaciente()
         {
             InitializeComponent();
-            arbol = new ArbolPacientes();
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -37,17 +37,45 @@ namespace Desafío1
                 return;
             }
 
-            arbol.EliminarPorNumeroExpediente(num);
-            ActualizarListaPacientes();
-            // Mostrar un mensaje indicando si la eliminación fue exitosa
-            MessageBox.Show("El paciente ha sido eliminado correctamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+            //Cuadro de diálogo de confirmación
+            DialogResult result = MessageBox.Show("¿Está seguro de que desea eliminar este paciente?", "Confirmación", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
-        private void ActualizarListaPacientes()
-        {
-            //lstPacientes.Items.Clear();
-            Console.WriteLine("\n Pacientes que quedan, después de eliminar: \n");
-            arbol.MostrarPacientes();
+            if (result == DialogResult.OK)
+            {
+                // El usuario ha confirmado la eliminación
+                try
+                {
+                    Conexion objCon = new Conexion();
+                    MySqlConnection con = objCon.conexion;
+                    con.Open(); 
+
+                    MySqlCommand query = new MySqlCommand("DELETE FROM paciente WHERE expediente = @num", con);
+                    query.Parameters.AddWithValue("@num", num);
+
+                    int rowsAffected = query.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("El paciente con número de expediente " + num + " ha sido eliminado correctamente.");
+                        txtExpediente.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró ningún paciente con ese número de expediente.");
+                    }
+
+                    con.Close(); 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se pudo eliminar el paciente, error: " + ex.ToString());
+                }
+            }
+            else
+            {
+                //Operación cancelada
+                MessageBox.Show("Operación cancelada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

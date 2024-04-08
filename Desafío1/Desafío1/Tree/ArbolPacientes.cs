@@ -20,7 +20,13 @@ namespace Desafío1.Tree
         public void Insertar(Paciente paciente)
         {
             raiz = InsertarRecursivo(raiz, paciente);
+            Console.WriteLine("Se ha insertado el paciente: " + paciente);
+            Console.WriteLine("Estado actual del árbol:");
+            MostrarArbol(); // Mostrar el árbol después de cada inserción
+
+
         }
+
 
         private Nodo InsertarRecursivo(Nodo nodo, Paciente paciente)
         {
@@ -92,8 +98,33 @@ namespace Desafío1.Tree
             }
         }
 
+        public void MostrarArbol()
+        {
+            MostrarArbolRecursivo(raiz, 0);
+        }
+
+        private void MostrarArbolRecursivo(Nodo nodo, int nivel)
+        {
+            if (nodo != null)
+            {
+                for (int i = 0; i < nivel; i++)
+                {
+                    Console.Write("  "); // Espacios para visualizar la jerarquía del árbol
+                }
+                Console.WriteLine(nodo.Paciente); // Imprimir información del paciente en este nodo
+
+                // Llamar recursivamente a cada hijo
+                foreach (var hijo in nodo.Punteros)
+                {
+                    MostrarArbolRecursivo(hijo, nivel + 1);
+                }
+            }
+        }
+
+
         public Paciente BuscarPorNumeroExpediente(string numeroExpediente)
         {
+            Console.WriteLine(raiz);
             return BuscarPorNumeroExpedienteRecursivo(raiz, numeroExpediente);
         }
 
@@ -122,7 +153,22 @@ namespace Desafío1.Tree
 
         public void EliminarPorNumeroExpediente(string numeroExpediente)
         {
-            raiz = EliminarPorNumeroExpedienteRecursivo(raiz, numeroExpediente);
+
+            Console.WriteLine(numeroExpediente);
+
+            // Verificar si el paciente existe antes de intentar eliminarlo
+            Paciente pacienteAEliminar = BuscarPorNumeroExpediente(numeroExpediente);
+            if (pacienteAEliminar != null)
+            {
+                raiz = EliminarPorNumeroExpedienteRecursivo(raiz, numeroExpediente);
+                // Mostrar mensaje de éxito o realizar otras acciones necesarias
+                MessageBox.Show("Paciente eliminado correctamente.", "Eliminación Exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Mostrar un mensaje de error si el paciente no se encuentra
+                MessageBox.Show("El paciente no se encuentra en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private Nodo EliminarPorNumeroExpedienteRecursivo(Nodo nodo, string numeroExpediente)
@@ -169,6 +215,7 @@ namespace Desafío1.Tree
             return Balancear(nodo);
         }
 
+
         private Nodo EncontrarSucesor(Nodo nodo)
         {
             Nodo actual = nodo;
@@ -178,5 +225,29 @@ namespace Desafío1.Tree
             }
             return actual;
         }
+
+        public void MostrarTodosLosPacientes()
+        {
+            if (raiz == null)
+            {
+                Console.WriteLine("El árbol está vacío.");
+            }
+            else
+            {
+                Console.WriteLine("Pacientes en el árbol:");
+                MostrarRecursivoEnOrden(raiz);
+            }
+        }
+
+        private void MostrarRecursivoEnOrden(Nodo nodo)
+        {
+            if (nodo != null)
+            {
+                MostrarRecursivoEnOrden(nodo.Punteros[0]); // Recorrer subárbol izquierdo
+                Console.WriteLine(nodo.Paciente); // Mostrar el paciente actual
+                MostrarRecursivoEnOrden(nodo.Punteros[1]); // Recorrer subárbol derecho
+            }
+        }
+
     }
 }

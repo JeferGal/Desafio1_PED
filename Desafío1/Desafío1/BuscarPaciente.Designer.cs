@@ -36,6 +36,12 @@ namespace Desafío1
             this.lblSeparador = new System.Windows.Forms.Label();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.lblDatos = new System.Windows.Forms.Label();
+            this.lblEx = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblGenre = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblPresion = new System.Windows.Forms.Label();
+            this.lblRecomendacion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +56,7 @@ namespace Desafío1
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(7);
-            this.panel1.Size = new System.Drawing.Size(320, 452);
+            this.panel1.Size = new System.Drawing.Size(320, 569);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -117,7 +123,7 @@ namespace Desafío1
             this.btnMenu.IconColor = System.Drawing.SystemColors.ButtonFace;
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 40;
-            this.btnMenu.Location = new System.Drawing.Point(603, 380);
+            this.btnMenu.Location = new System.Drawing.Point(1222, 498);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(91, 58);
             this.btnMenu.TabIndex = 5;
@@ -127,17 +133,73 @@ namespace Desafío1
             // lblDatos
             // 
             this.lblDatos.AutoSize = true;
-            this.lblDatos.Location = new System.Drawing.Point(372, 94);
+            this.lblDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+            this.lblDatos.Location = new System.Drawing.Point(368, 36);
             this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(49, 17);
+            this.lblDatos.Size = new System.Drawing.Size(238, 29);
             this.lblDatos.TabIndex = 8;
-            this.lblDatos.Text = "Datos:";
+            this.lblDatos.Text = "Datos del paciente:";
+            // 
+            // lblEx
+            // 
+            this.lblEx.AutoSize = true;
+            this.lblEx.Location = new System.Drawing.Point(369, 115);
+            this.lblEx.Name = "lblEx";
+            this.lblEx.Size = new System.Drawing.Size(0, 17);
+            this.lblEx.TabIndex = 9;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(369, 154);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(0, 17);
+            this.lblName.TabIndex = 10;
+            // 
+            // lblGenre
+            // 
+            this.lblGenre.AutoSize = true;
+            this.lblGenre.Location = new System.Drawing.Point(369, 196);
+            this.lblGenre.Name = "lblGenre";
+            this.lblGenre.Size = new System.Drawing.Size(0, 17);
+            this.lblGenre.TabIndex = 11;
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(369, 237);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(0, 17);
+            this.lblTipo.TabIndex = 12;
+            // 
+            // lblPresion
+            // 
+            this.lblPresion.AutoSize = true;
+            this.lblPresion.Location = new System.Drawing.Point(369, 282);
+            this.lblPresion.Name = "lblPresion";
+            this.lblPresion.Size = new System.Drawing.Size(0, 17);
+            this.lblPresion.TabIndex = 13;
+            // 
+            // lblRecomendacion
+            // 
+            this.lblRecomendacion.AutoSize = true;
+            this.lblRecomendacion.Location = new System.Drawing.Point(369, 327);
+            this.lblRecomendacion.Name = "lblRecomendacion";
+            this.lblRecomendacion.Size = new System.Drawing.Size(0, 17);
+            this.lblRecomendacion.TabIndex = 14;
             // 
             // BuscarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 450);
+            this.ClientSize = new System.Drawing.Size(1325, 568);
+            this.Controls.Add(this.lblRecomendacion);
+            this.Controls.Add(this.lblPresion);
+            this.Controls.Add(this.lblTipo);
+            this.Controls.Add(this.lblGenre);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.lblEx);
             this.Controls.Add(this.lblDatos);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.panel1);
@@ -162,5 +224,11 @@ namespace Desafío1
         private System.Windows.Forms.Label lblSeparador;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Label lblDatos;
+        private System.Windows.Forms.Label lblEx;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblGenre;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label lblPresion;
+        private System.Windows.Forms.Label lblRecomendacion;
     }
 }

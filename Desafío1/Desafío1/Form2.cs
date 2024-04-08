@@ -44,5 +44,16 @@ namespace Desafío1
             new EliminarPaciente().Show();
             this.Hide();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            new VerTodos().Show();
+            this.Hide();
+        }
     }
 }

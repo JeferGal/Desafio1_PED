@@ -1,5 +1,6 @@
 ﻿using Desafío1.Models;
 using Desafío1.Tree;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,9 +64,41 @@ namespace Desafío1
                 TipoSangre tipoSangre = (TipoSangre)cmbSangre.SelectedItem;
                 PresionArterial presionArterial = (PresionArterial)cmbPresion.SelectedItem;
 
-
                 Paciente nuevoPaciente = new Paciente(numeroExpediente, nombre, genero, tipoSangre, presionArterial);
                 arbol.Insertar(nuevoPaciente);
+                MessageBox.Show("Paciente ingresado de manera correcta.", "Datos ingresados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Conexion objCon = new Conexion();
+                try
+                {
+                    if (objCon.AbrirConexion())
+                    {
+                        MySqlConnection con = objCon.conexion;
+                        MySqlCommand query = new MySqlCommand("INSERT INTO paciente (expediente, nombre, genero, presion, tipo_sangre) VALUES (@expediente, @nombre, @genero, @presion, @tipo_sangre)", con);
+                        query.Parameters.AddWithValue("@expediente", txtExpediente.Text);
+                        query.Parameters.AddWithValue("@nombre", txtNombre.Text);
+                        query.Parameters.AddWithValue("@genero", cmbGenero.SelectedItem.ToString());
+                        query.Parameters.AddWithValue("@presion", cmbPresion.SelectedItem.ToString());
+                        query.Parameters.AddWithValue("@tipo_sangre", cmbSangre.SelectedItem.ToString());
+                        query.CommandType = CommandType.Text;
+
+                        int filas = query.ExecuteNonQuery();
+                        if (filas > 0)
+                        {
+                            MessageBox.Show("Datos ingresados correctamente");
+                        }
+                        else
+                            MessageBox.Show("Ocurrió un error");
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show("Error de conexión a la base de datos: " + ex.Message);
+                }
+                finally
+                {
+                    objCon.CerrarConexion();
+                }
 
                 ActualizarListaPacientes();
 
@@ -96,6 +129,7 @@ namespace Desafío1
         {
             //lstPacientes.Items.Clear();
             arbol.MostrarPacientes();
+            arbol.MostrarArbol();
         }
 
     }

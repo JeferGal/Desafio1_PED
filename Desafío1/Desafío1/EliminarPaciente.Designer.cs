@@ -128,6 +128,7 @@ namespace Desafío1
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EliminarPaciente";
             this.Text = "EliminarPaciente";
             this.panel1.ResumeLayout(false);
